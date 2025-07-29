@@ -1,20 +1,20 @@
 #!/bin/bash
 
-# Variables
-FILE_TO_EDIT="README.md"
-TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')  # Full date and time
-NEW_CONTENT="Auto-update performed at $TIMESTAMP !!!"
-COMMIT_MESSAGE="Auto-update: $TIMESTAMP"
-BRANCH="main"   # Change to 'master' if your repo uses master
 
-# Step 1: Append the timestamped content to the file
-echo "$NEW_CONTENT" >> "$FILE_TO_EDIT"
+while true; do
+    # Random sleep between 5 and 20 minutes
+    SLEEP_TIME=$((5 + RANDOM % 30))
+    echo "Sleeping for $SLEEP_TIME seconds..."
+    sleep $SLEEP_TIME
 
-# Step 2: Stage the changes
-git add "$FILE_TO_EDIT"
+    TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
+    NEW_CONTENT="Auto-update performed at $TIMESTAMP"
+    COMMIT_MESSAGE="Auto-update: $TIMESTAMP"
+    BRANCH="main"
 
-# Step 3: Commit with timestamp
-git commit -m "$COMMIT_MESSAGE"
+    echo "$NEW_CONTENT" > README.md
 
-# Step 4: Push to GitHub
-git push origin "$BRANCH"
+    git add .
+    git commit -m "$COMMIT_MESSAGE"
+    git push origin "$BRANCH"
+done
