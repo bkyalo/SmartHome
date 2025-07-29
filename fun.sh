@@ -1,20 +1,55 @@
 #!/bin/bash
 
+# Configuration
+BRANCH="auto-update"
+REPO_DIR=$(pwd)
+LOG_FILE="$REPO_DIR/auto-update.log"
+
+# Ensure we're in the right branch
+current_branch=$(git rev-parse --abbrev-ref HEAD)
+if [ "$current_branch" != "$BRANCH" ]; then
+    echo "Error: Not on $BRANCH branch. Current branch is $current_branch."
+    exit 1
+fi
+
+# Function to log messages
+log() {
+    local timestamp
+    timestamp=$(date '+%Y-%m-%d %H:%M:%S')
+    echo "[$timestamp] $1" | tee -a "$LOG_FILE"
+}
+
+log "Starting auto-update script on branch $BRANCH"
 
 while true; do
-    # Random sleep between 5 and 20 minutes
+    # Random sleep between 5 and 30 seconds (for demo purposes)
     SLEEP_TIME=$((5 + RANDOM % 30))
-    echo "Sleeping for $SLEEP_TIME seconds..."
+    log "Sleeping for $SLEEP_TIME seconds..."
     sleep $SLEEP_TIME
 
     TIMESTAMP=$(date '+%Y-%m-%d %H:%M:%S')
-    NEW_CONTENT="Auto-update performed at $TIMESTAMP"
     COMMIT_MESSAGE="Auto-update: $TIMESTAMP"
-    BRANCH="main"
+    
+    # Update README with current timestamp
+    echo "Last auto-update: $TIMESTAMP" > README.md
+    echo "Branch: $BRANCH" >> README.md
+    echo "Repository: SmartHome" >> README.md
 
-    echo "$NEW_CONTENT" > README.md
+    # Git operations
+    if ! git add . >> "$LOG_FILE" 2>&1; then
+        log "Error: Failed to stage changes"
+        continue
+    fi
 
-    git add .
-    git commit -m "$COMMIT_MESSAGE"
-    git push origin "$BRANCH"
+    if ! git commit -m "$COMMIT_MESSAGE" >> "$LOG_FILE" 2>&1; then
+        log "Warning: No changes to commit"
+        continue
+    fi
+
+    if ! git push origin "$BRANCH" >> "$LOG_FILE" 2>&1; then
+        log "Error: Failed to push to $BRANCH"
+        continue
+    fi
+
+    log "Successfully updated and pushed changes"
 done
