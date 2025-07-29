@@ -22,8 +22,8 @@ log() {
 log "Starting auto-update script on branch $BRANCH"
 
 while true; do
-    # Random sleep between 5 and 30 seconds (for demo purposes)
-    SLEEP_TIME=$((5 + RANDOM % 30))
+    # Random sleep between 300 and 1000 seconds (for demo purposes)
+    SLEEP_TIME=$((300 + RANDOM % 1000))
     log "Sleeping for $SLEEP_TIME seconds..."
     sleep $SLEEP_TIME
 
