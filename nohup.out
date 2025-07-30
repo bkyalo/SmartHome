@@ -17931,3 +17931,12 @@ Sleeping for 5 seconds...
 To https://github.com/bkyalo/SmartHome.git
    0291cc2..22514b9  main -> main
 Sleeping for 10 seconds...
+On branch main
+Your branch is ahead of 'origin/main' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+To https://github.com/bkyalo/SmartHome.git
+ ! [remote rejected] main -> main (cannot lock ref 'refs/heads/main': is at 105d8e86f744ca50bec0ebeac1740a26d37f0271 but expected 22514b920a5fcbe7f2602aa54fe2fe7616db78ab)
+error: failed to push some refs to 'https://github.com/bkyalo/SmartHome.git'
+Sleeping for 34 seconds...
