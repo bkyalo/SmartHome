@@ -69132,3 +69132,19 @@ Sleeping for 20 seconds...
 To https://github.com/bkyalo/SmartHome.git
    d71013b4..73ffbdd7  main -> main
 Sleeping for 8 seconds...
+[main a3e89866] Auto-update: 2025-07-31 13:45:38
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+To https://github.com/bkyalo/SmartHome.git
+   73ffbdd7..a3e89866  main -> main
+Sleeping for 5 seconds...
+error: short read while indexing README.md
+error: README.md: failed to insert into database
+error: unable to index file 'README.md'
+fatal: updating files failed
+fatal: Unable to create '/home/jared/SmartHome/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
