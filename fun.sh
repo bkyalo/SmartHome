@@ -3,7 +3,7 @@
 
 while true; do
     # Random sleep between 5 and 20 minutes
-    SLEEP_TIME=$((5 + RANDOM % 30))
+    SLEEP_TIME=$((3600 + RANDOM % 3601))
     echo "Sleeping for $SLEEP_TIME seconds..."
     sleep $SLEEP_TIME
 
