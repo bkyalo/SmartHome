@@ -435222,3 +435222,24 @@ To https://github.com/bkyalo/SmartHome.git
  ! [remote rejected]       main -> main (cannot lock ref 'refs/heads/main': is at 32e7e392ae7a08db7ae31101e2756237331d4c40 but expected 2eeb14f3fabb06fff912b7b2b5fb61d45503f123)
 error: failed to push some refs to 'https://github.com/bkyalo/SmartHome.git'
 Sleeping for 7 seconds...
+fatal: Unable to create '/home/jared/SmartHome/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+fatal: Unable to create '/home/jared/SmartHome/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+[main 324512a28f] Auto-update: 2025-08-09 21:20:31
+ 2 files changed, 10 insertions(+), 1 deletion(-)
+Everything up-to-date
+Sleeping for 21 seconds...
+To https://github.com/bkyalo/SmartHome.git
+   32e7e392ae..324512a28f  main -> main
+Sleeping for 16 seconds...
