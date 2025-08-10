@@ -477281,3 +477281,24 @@ Sleeping for 26 seconds...
 To https://github.com/bkyalo/SmartHome.git
    2802908f15..4d86a19b5a  main -> main
 Sleeping for 14 seconds...
+fatal: Unable to create '/home/jared/SmartHome/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+fatal: Unable to create '/home/jared/SmartHome/.git/index.lock': File exists.
+
+Another git process seems to be running in this repository, e.g.
+an editor opened by 'git commit'. Please make sure all processes
+are terminated then try again. If it still fails, a git process
+may have crashed in this repository earlier:
+remove the file manually to continue.
+[main 7aeb2c9a29] Auto-update: 2025-08-10 23:58:57
+ 2 files changed, 6 insertions(+), 1 deletion(-)
+Everything up-to-date
+Sleeping for 34 seconds...
+To https://github.com/bkyalo/SmartHome.git
+   4d86a19b5a..7aeb2c9a29  main -> main
+Sleeping for 5 seconds...
