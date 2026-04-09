@@ -44,7 +44,14 @@
 ![](https://github-readme-stats.vercel.app/api/top-langs/?username=bkyalo&theme=merko&hide_border=false&include_all_commits=true&count_private=true&layout=compact)
 
 ## 🏆 GitHub Trophies
-![](https://github-profile-trophy.vercel.app/?username=bkyalo&theme=tokyonight&no-frame=false&no-bg=true&margin-w=4)
+
+[![trophy](https://github-profile-trophy.vercel.app/?username=bkyalo)](https://github.com/ryo-ma/github-profile-trophy)
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=bkyalo)](https://github.com/anuraghazra/github-readme-stats)
+
+![GitHub stats](https://github-readme-stats.vercel.app/api?username=bkyalo&show_icons=true)  
+
+![GitHub streak stats](https://streak-stats.demolab.com/?user=bkyalo)  
 
 ### ✍️ Random Dev Quote
 ![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical)
